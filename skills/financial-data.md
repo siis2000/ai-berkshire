@@ -29,6 +29,33 @@
 | 1（主） | **东方财富** | eastmoney.com → 搜股票代码 → 财务报表 | 直接访问 |
 | 2（副） | **巨潮资讯** | cninfo.com.cn | 原始年报/季报PDF |
 
+### 台股（台积电2330、联发科2454、大立光3008等）
+
+| 优先级 | 来源 | URL | 获取方式 |
+|--------|------|-----|---------|
+| 1（主） | **FinMind API** | api.finmindtrade.com | `tools/twstock_data.py`（零依赖脚本，见下） |
+| 2（副） | **Goodinfo台湾股市资讯网** | goodinfo.tw/tw/StockDetail.asp?STOCK_ID={代码} | 直接访问 |
+| 原始一手 | 公开资讯观测站（MOPS） | mops.twse.com.tw | 财报原文/月营收公告 |
+
+**FinMind 取数工具**（分析台股时优先调用，输出自带市值验算）：
+
+```bash
+python3 tools/twstock_data.py quote 2330        # 最新行情 + PER/PBR/殖利率 + 市值验算
+python3 tools/twstock_data.py valuation 2330    # 估值指标 + PER一年区间 + 52周高低
+python3 tools/twstock_data.py financials 2330   # 近5年年度核心财务（营收/毛利率/归母净利/EPS/ROE）
+python3 tools/twstock_data.py revenue 2330      # 近13个月月营收及同比
+python3 tools/twstock_data.py dividend 2330     # 近年股利政策（现金/股票股利、除息日）
+python3 tools/twstock_data.py search 台積        # 搜索股票代码（注意台股名称为繁体）
+```
+
+台股特别注意：
+
+1. **货币单位是新台币（TWD）**，与港币/人民币/美元混排时必须显式标注，跨市场对比先统一换算
+2. **月营收是台股独有优势**：上市柜公司每月10日前强制披露上月营收，是跟踪基本面拐点最快的公开信号，earnings-review/thesis-tracker 类分析应优先利用（`revenue` 子命令）
+3. FinMind 损益表为**单季值**，工具已自动加总为年度值；不足4季的年份会标注"仅前N季累计"
+4. FinMind 未注册可直接用（有小时级限额）。注册后的 API token **只存本机、严禁提交到 git**，工具按优先级自动读取：①环境变量 `FINMIND_TOKEN`；②本地文件 `local/finmind_token.txt`（`local/` 已被 `.gitignore` 永久排除，把 token 单独一行写入该文件即可）。token 不得出现在报告、skill、commit 中
+5. 交叉验证：FinMind 数值与 Goodinfo（或 macrotrends 上的 ADR，如 TSM）对照，误差规则同下；台积电等有 ADR 的公司注意 ADR 与台股原股的汇率/存托比率差异（1 TSM ADR = 5 股 2330）
+
 ---
 
 ## 执行规范
@@ -90,6 +117,26 @@
 
 ---
 
+## 股价与复权（历史序列必读）
+
+价格有三种口径，混用会让历史股价位置、长期涨幅、历史估值分位全部失真：
+
+| 口径 | 含义 | 用途 |
+|------|------|------|
+| 不复权 | 实际成交价，除权除息日跳空 | 仅用于"当前时点"快照 |
+| 前复权 | 以最新价为基准回调历史价 | 历史股价对比、N年涨幅、历史PE band 一律用它 |
+| 后复权 | 以上市首日为基准前推 | 计算历史总回报/年化收益 |
+
+规则：
+
+1. 涉及历史价格的分析统一用**前复权**，且同一分析内**不得混用**复权与不复权来源。
+2. 当前市值/当前PE 用**当前实际股价 × 当前总股本**即可，与复权无关——复权只影响历史序列。
+3. 跨越拆股/大比例送转的每股指标（历史EPS、历史股价），必须复权还原后再同比。
+4. 总回报/年化收益需计入分红（后复权已含），只看价格涨幅会低估。
+5. 增发/回购后市值验算以最新总股本为准（`financial_rigor.py verify-market-cap` 偏差>5% 会提示核对）。
+
+---
+
 ## 快速索引
 
 | 场景 | 主要来源 | 备用来源 |
@@ -101,3 +148,5 @@
 | 吉比特 | eastmoney.com（603444） | cninfo.com.cn |
 | Nintendo | macrotrends.net/stocks/charts/NTDOY | stockanalysis.com/stocks/ntdoy |
 | Capcom | macrotrends（CCOEY） | stockanalysis（CCOEY） |
+| 台积电 | tools/twstock_data.py（2330） | goodinfo.tw / macrotrends（TSM，注意1 ADR=5股） |
+| 联发科 | tools/twstock_data.py（2454） | goodinfo.tw |
