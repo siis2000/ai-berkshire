@@ -1,7 +1,7 @@
 {
-  "count": 2467,
-  "published": 2262,
-  "drafts": 205,
+  "count": 2471,
+  "published": 2264,
+  "drafts": 207,
   "reports": [
     {
       "title": "网易研究：三成市值是净现金的游戏现金流，125美元处在观望区，115美元以下分批",
@@ -67,6 +67,50 @@
       "type": "底稿",
       "date": "2026-10-21",
       "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "段永平雪球归档来源与完整性说明",
+      "path": "reports/泡泡玛特/证据/段永平雪球归档-20261021/来源与完整性说明.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "证据",
+      "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "段永平雪球泡泡玛特归档候选链接目录",
+      "path": "reports/泡泡玛特/证据/段永平雪球归档-20261021/候选链接目录.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "证据",
+      "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "泡泡玛特机构调研汇总：短期修复分歧、营业额与利润展望",
+      "path": "reports/泡泡玛特/泡泡玛特-机构调研汇总与经营展望-20261021.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-21",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "段永平雪球发言：泡泡玛特相关归档（截至2026-10-21）",
+      "path": "reports/泡泡玛特/段永平雪球发言-泡泡玛特相关-20261021.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
       "ticker": ""
     },
     {
