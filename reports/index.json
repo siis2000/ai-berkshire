@@ -1,8 +1,74 @@
 {
-  "count": 2471,
-  "published": 2264,
-  "drafts": 207,
+  "count": 2477,
+  "published": 2268,
+  "drafts": 209,
   "reports": [
+    {
+      "title": "恒生科技与纳斯达克估值对比研究报告",
+      "path": "reports/恒生科技/恒生科技与纳斯达克估值对比-20261024.md",
+      "bucket": "专题",
+      "group": "恒生科技",
+      "series": "",
+      "type": "横评对比",
+      "date": "2026-10-24",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "来源、观察日与独立性登记",
+      "path": "reports/恒生科技/index-comparison-20261024/sources.md",
+      "bucket": "专题",
+      "group": "恒生科技",
+      "series": "index-comparison-20261024",
+      "type": "底稿",
+      "date": "2026-10-24",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "审计范围与结果",
+      "path": "reports/恒生科技/index-comparison-20261024/audit-notes.md",
+      "bucket": "专题",
+      "group": "恒生科技",
+      "series": "index-comparison-20261024",
+      "type": "底稿",
+      "date": "2026-10-24",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "恒生科技估值全景：指数与十家公司的历史位置（2026-10-23）",
+      "path": "reports/恒生科技/恒生科技估值全景-20261023.md",
+      "bucket": "专题",
+      "group": "恒生科技",
+      "series": "",
+      "type": "估值仓位",
+      "date": "2026-10-23",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "纳指崩盘 78%：苹果从底部涨了 1000 倍",
+      "path": "reports/市场复盘/纳指崩盘复盘-公众号-20261023.md",
+      "bucket": "专题",
+      "group": "市场复盘",
+      "series": "",
+      "type": "公众号",
+      "date": "2026-10-23",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "泡泡玛特-公众号-段永平发言实录",
+      "path": "reports/泡泡玛特/泡泡玛特-公众号-段永平发言实录-20261022.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "",
+      "type": "公众号",
+      "date": "2026-10-22",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "网易研究：三成市值是净现金的游戏现金流，125美元处在观望区，115美元以下分批",
       "path": "reports/网易/网易研究报告-20261021.md",
