@@ -1,8 +1,74 @@
 {
-  "count": 2477,
-  "published": 2268,
+  "count": 2483,
+  "published": 2274,
   "drafts": 209,
   "reports": [
+    {
+      "title": "泡泡玛特（09992.HK）2026Q3业绩分析",
+      "path": "reports/泡泡玛特/泡泡玛特-earnings-2026H1及Q3更新-20261028.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "",
+      "type": "财报",
+      "date": "2026-10-28",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "腾讯控股（00700.HK）投资研究报告",
+      "path": "reports/腾讯/腾讯投资研究报告-workbuddy-20261027.md",
+      "bucket": "公司",
+      "group": "腾讯",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-27",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "腾讯与快手估值及三年、十年回报研究报告",
+      "path": "reports/腾讯快手比较/估值-20261025/腾讯与快手估值及三年十年回报研究报告-20261025.md",
+      "bucket": "公司",
+      "group": "腾讯快手比较",
+      "series": "估值-20261025",
+      "type": "估值仓位",
+      "date": "2026-10-25",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "腾讯估值证据与经营分析底稿",
+      "path": "reports/腾讯快手比较/估值-20261025/tencent_research.md",
+      "bucket": "公司",
+      "group": "腾讯快手比较",
+      "series": "估值-20261025",
+      "type": "估值仓位",
+      "date": "2026-10-25",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "快手估值研究底稿：低利润倍数背后的现金消耗与可灵归属",
+      "path": "reports/腾讯快手比较/估值-20261025/kuaishou_research.md",
+      "bucket": "公司",
+      "group": "腾讯快手比较",
+      "series": "估值-20261025",
+      "type": "估值仓位",
+      "date": "2026-10-25",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "腾讯与快手估值：独立反证与模型复核",
+      "path": "reports/腾讯快手比较/估值-20261025/independent_review.md",
+      "bucket": "公司",
+      "group": "腾讯快手比较",
+      "series": "估值-20261025",
+      "type": "估值仓位",
+      "date": "2026-10-25",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "恒生科技与纳斯达克估值对比研究报告",
       "path": "reports/恒生科技/恒生科技与纳斯达克估值对比-20261024.md",
